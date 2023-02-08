@@ -5,10 +5,9 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .body{
-    background-image: linear-gradient(to right, rgb(182, 79, 79), #2727a5);
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(to right, #f66, #6464f8);
+    background-image: linear-gradient(to right, #f2f2f2, #f2f2f2);
 }
 .container {
     background-image: linear-gradient(to right, #f66, #6464f8);
