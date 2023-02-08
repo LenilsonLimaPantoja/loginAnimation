@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <script>
+    function altSenha() {
+      var container = document.querySelector(".container");
+      container.setAttribute("class", "sumir");
+
+      var login = document.querySelector(".login");
+      login.setAttribute("class", "login sumir");
+
+      var senha = document.querySelector(".alt-senha");
+      senha.setAttribute("class", "alt-senha");
+
+      //executar em 3 segundo
+      setTimeout(() => {
+        container.setAttribute("class", "container");
+      }, 100);
+    }
+
+    function cadUser() {
+      var container = document.querySelector(".container");
+      container.setAttribute("class", "sumir");
+
+      var senha = document.querySelector(".cad-user");
+      senha.setAttribute("class", "cad-user");
+
+      var login = document.querySelector(".login");
+      login.setAttribute("class", "login sumir");
+      //executar em 3 segundo
+      setTimeout(() => {
+        container.setAttribute("class", "container");
+      }, 100);
+    }
+
+    function returnLogin() {
+      var container = document.querySelector(".container");
+      container.setAttribute("class", "sumir");
+      
+      var senha = document.querySelector(".alt-senha");
+      senha.setAttribute("class", "alt-senha sumir");
+
+      var senha = document.querySelector(".cad-user");
+      senha.setAttribute("class", "cad-user sumir");
+
+      var login = document.querySelector(".login");
+      login.setAttribute("class", "login");
+      //executar em 3 segundo
+      setTimeout(() => {
+        container.setAttribute("class", "container");
+      }, 100);
+    }
+  </script>
+  <body>
+    <div class="container">
+      <div action="" class="login">
+        <h1>member login</h1>
+        <input type="text" placeholder="Informe o nome de usuário" />
+        <input type="password" placeholder="Informe a senha" />
+        <button>Entrar</button>
+        <div class="btn-footer">
+          <a href="#" onclick="altSenha()">Esqueceu a senha?</a>
+          <a href="#" onclick="cadUser()">Cadastre-se</a>
+        </div>
+      </div>
+
+      <div action="" class="alt-senha sumir">
+        <h1>Change Password</h1>
+        <input
+          type="text"
+          placeholder="Informe o email vinculado ao seu usuário"
+        />
+        <button>Solicitar alteração</button>
+        <div class="btn-footer">
+          <a href="#" onclick="returnLogin()">Retornar ao Login</a>
+        </div>
+      </div>
+
+      <div action="" class="cad-user sumir">
+        <h1>register user</h1>
+        <input
+          type="text"
+          placeholder="Informe o email de usuário"
+        />
+        <input
+          type="text"
+          placeholder="Informe seu nome usuário"
+        />
+        <input
+          type="password"
+          placeholder="Criar uma senha"
+        />
+        <input
+          type="password"
+          placeholder="Confirmar senha"
+        />
+        <button>Cadastrar usuário</button>
+        <div class="btn-footer">
+          <a href="#" onclick="returnLogin()">Retornar ao Login</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
