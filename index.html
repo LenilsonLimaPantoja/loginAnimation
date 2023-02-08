@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Autenticação de usuário</title>
     <link rel="stylesheet" href="estilo.css" />
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
   </head>
   <script>
     function altSenha() {
@@ -43,7 +43,7 @@
     function returnLogin() {
       var container = document.querySelector(".container");
       container.setAttribute("class", "sumir");
-      
+
       var senha = document.querySelector(".alt-senha");
       senha.setAttribute("class", "alt-senha sumir");
 
@@ -59,51 +59,41 @@
     }
   </script>
   <body>
-    <div class="container">
-      <div action="" class="login">
-        <h1>member login</h1>
-        <input type="text" placeholder="Informe o nome de usuário" />
-        <input type="password" placeholder="Informe a senha" />
-        <button>Entrar</button>
-        <div class="btn-footer">
-          <a href="#" onclick="altSenha()">Esqueceu a senha?</a>
-          <a href="#" onclick="cadUser()">Cadastre-se</a>
+    <div class="body">
+      <div class="container">
+        <div action="" class="login">
+          <h1>member login</h1>
+          <input type="text" placeholder="Informe o nome de usuário" />
+          <input type="password" placeholder="Informe a senha" />
+          <button>Entrar</button>
+          <div class="btn-footer">
+            <a href="#" onclick="altSenha()">Esqueceu a senha?</a>
+            <a href="#" onclick="cadUser()">Cadastre-se</a>
+          </div>
         </div>
-      </div>
 
-      <div action="" class="alt-senha sumir">
-        <h1>Change Password</h1>
-        <input
-          type="text"
-          placeholder="Informe o email vinculado ao seu usuário"
-        />
-        <button>Solicitar alteração</button>
-        <div class="btn-footer">
-          <a href="#" onclick="returnLogin()">Retornar ao Login</a>
+        <div action="" class="alt-senha sumir">
+          <h1>Change Password</h1>
+          <input
+            type="text"
+            placeholder="Informe o email vinculado ao seu usuário"
+          />
+          <button>Solicitar alteração</button>
+          <div class="btn-footer">
+            <a href="#" onclick="returnLogin()">Retornar ao Login</a>
+          </div>
         </div>
-      </div>
 
-      <div action="" class="cad-user sumir">
-        <h1>register user</h1>
-        <input
-          type="text"
-          placeholder="Informe o email de usuário"
-        />
-        <input
-          type="text"
-          placeholder="Informe seu nome usuário"
-        />
-        <input
-          type="password"
-          placeholder="Criar uma senha"
-        />
-        <input
-          type="password"
-          placeholder="Confirmar senha"
-        />
-        <button>Cadastrar usuário</button>
-        <div class="btn-footer">
-          <a href="#" onclick="returnLogin()">Retornar ao Login</a>
+        <div action="" class="cad-user sumir">
+          <h1>register user</h1>
+          <input type="text" placeholder="Informe o email de usuário" />
+          <input type="text" placeholder="Informe seu nome usuário" />
+          <input type="password" placeholder="Criar uma senha" />
+          <input type="password" placeholder="Confirmar senha" />
+          <button>Cadastrar usuário</button>
+          <div class="btn-footer">
+            <a href="#" onclick="returnLogin()">Retornar ao Login</a>
+          </div>
         </div>
       </div>
     </div>

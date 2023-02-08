@@ -4,9 +4,11 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+.body{
+    background-color: #fff;
+}
 .container {
-    background-image: linear-gradient(to top, #f66, #6464f8);
+    background-image: linear-gradient(to right, #f66, #6464f8);
     height: auto;
     width: 100vw;
     padding: 30px;
@@ -14,18 +16,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-left-radius: 100%;
-    border-bottom-right-radius: 100%;
+    /* border-top-left-radius: 100%; */
+    /* border-bottom-right-radius: 100%; */
     animation-name: container;
     animation-duration: .5s;
     animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* animation-iteration-count: calc(3); */
-    /* animation-direction: alternate; */
+    /* animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 }
 
 @keyframes container {
+    0% {
+        width: 10vw;
+    }
     100%{
+        width: 100vw;
         border-radius: 0px;
     }
 }
@@ -36,24 +40,27 @@
     row-gap: 15px;
     background-color: transparent;
     transition: 1s;
-    transform: translateY(-300%);
+    z-index: -10;
+    /* transform: translateY(-300%); */
     animation-name: login;
     animation-duration: .5s;
     animation-fill-mode: forwards;
+    animation-delay: .05s;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .sumir{
     display: none;
 }
 @keyframes login {
-    /* 0%{
-        transform: translateY(-200%);
-    }
-    50%{
+    /* 0%{ */
+        /* transform: translateY(-200%); */
+    /* } */
+    /* 50%{
         transform: rotate(50deg);
-    } */
+    }  */
     100%{
         transform: translateY(0%);
+        z-index: 1;
     }
 }
 h1 {
@@ -124,7 +131,7 @@ a:hover{
 }
 @media (max-width: 1024px) {
     .container{
-        background-image: linear-gradient(to right, #f66, #6464f8);
+        /* background-image: linear-gradient(to right, #f66, #6464f8); */
         padding: 30px 0;
     }
     .login, .alt-senha, .cad-user{
